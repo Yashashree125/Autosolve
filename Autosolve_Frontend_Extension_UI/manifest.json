@@ -1,0 +1,22 @@
+{
+    "manifest_version":2,
+    "name":"Autosolve",
+    "version":"12.26",
+    "description":"Extension to solve your questions in 1 click",
+    "author":"Muffin <3",
+    "icons":{
+        "128":"logo.png"
+    },
+    "browser_action":{
+        "default_icon":"logo.png",
+        "default_title":"Autosolve",
+        "default_popup":"home.html"
+
+
+    },
+    "permissions":["activeTab"],
+    "background":{
+        "scripts":["script.js"]
+    }
+
+}
