@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>API Key Input</title>
+    <style>
+      
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+     /* Header styles */
+     header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #0c0d0d;
+        padding: 20px;
+        color: white;
+      }
+
+      /* Title styles */
+      h1 {
+        margin: 0;
+        font-size: 24px;
+        display: flex;
+        align-items: center;
+      }
+
+      .logo {
+        height: 40px;
+        margin-right: 10px;
+      }
+
+      /* "Contact Us" button styles 
+      .contact-button {
+        background-color: white;
+        color: #0f1010;
+        padding: 10px 50px;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+      }*/
+      
+      /* input field */
+      input[type="text"] {
+        font-size: 15px;
+        padding: 8px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+      }
+      label {
+        font-size: 20px; 
+      }
+      
+      /* for the API key */
+      .api-key-container {
+        margin-top: 16px;
+        font-size: 16px;
+        font-family: monospace;
+        text-align: center;
+      }
+
+      .button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.submit-button,
+.clear-button {
+  padding: 10px 20px;
+  margin: 0 10px;
+}
+
+.clear-button {
+  background-color: #f44336;
+  color: white;
+  border: none;
+}
+
+.clear-button:hover {
+  background-color: #d32f2f;
+}
+
+.submit-button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+}
+
+.submit-button:hover {
+  background-color: #388e3c;
+}
+
+      #credits {
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 20px;
+        text-align: center;
+        border: none;
+        border-radius: 5px;
+        background-color: #70b9dd;
+        color: rgb(28, 5, 5);
+        text-shadow: 1px 1px 1px rgba(0,0,0,0.4);
+        box-shadow: 2px 2px 2px rgba(0,0,0,0.4);
+}
+
+
+    </style>
+  </head>
+  <body>
+    <header>
+        <h1>
+            <img class="logo" src="logo.png" alt="My App Logo">
+            Autosolve
+          </h1>
+        <!--button class="contact-button">Contact Us</!--button-->
+      </header>
+      
+
+      <form>
+    <div>
+      <label for="api-key">Enter API Key:</label>
+      <br><br>
+      <input type="text" id="api-key" name="api-key" autocomplete="off">
+      <br><br>
+      <label for="api-key">Current API Key:</label>
+      <br>
+      
+      <div class="api-key-container" id="display-api-key"></div>
+      <br><br>
+      
+      <div class="button-container">
+        <button type="submit" class="submit-button" onclick="getRemainingCredits()">Submit</button>
+        <button type="reset" class="clear-button" onclick="clearForm()">Clear</button>
+      
+      </div>
+      
+      <br>
+      <br>
+      <br><br>
+      <p id="credits">You have 42 remaining credits</p>
+    </div>
+  </form>
+    
+  </body>
+  <script src="script.js"></script>
+</html>
